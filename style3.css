@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle, #05070f, #0f1530);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Title */
+.title {
+  margin-top: 30px;
+  font-size: 2.2rem;
+  opacity: 0;
+  animation: fadeDown 1.5s forwards;
+}
+
+/* Marquee */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.track {
+  display: flex;
+  gap: 25px;
+  animation: scroll 30s linear infinite;
+}
+
+/* Images */
+.track img {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 16px;
+  opacity: 0.3;
+  transform: scale(0.95);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Active image (center me aane par) */
+.track img.active {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* Button */
+button {
+  margin-top: 70px;
+  padding: 15px 34px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: buttonUp 1.5s forwards;
+  animation-delay: 12s;
+}
+
+/* Animations */
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes buttonUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

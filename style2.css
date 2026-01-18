@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle, #1a1f3c, #05070f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Welcome text */
+/* Welcome text - centered & smaller */
+.welcome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;        /* chhota size */
+  font-weight: 500;
+  opacity: 1;
+  animation: fadeSmooth 5s forwards;
+  text-align: center;
+}
+
+/* Smooth fade animation */
+@keyframes fadeSmooth {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -55%);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+}
+
+/* Tap box */
+.tap-box {
+  width: 260px;
+  height: 160px;
+  border: 2px dashed #ff9800;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.tap-box:hover {
+  transform: scale(1.05);
+}
+
+/* Card */
+.card {
+  background: #11162a;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 300px;
+  animation: pop 0.5s ease forwards;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: #ff9800;
+}
+
+.card button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: white;
+  font-size: 0.95rem;
+}
+
+/* Animations */
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.hidden {
+  display: none;
+}
