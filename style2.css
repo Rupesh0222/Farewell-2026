@@ -27,6 +27,12 @@ body {
   opacity: 1;
   animation: fadeSmooth 5s forwards;
   text-align: center;
+
+  /* 🔥 NEON GLOW ADDED */
+  color: #00eaff;
+  text-shadow:
+    0 0 10px rgba(0, 234, 255, 0.8),
+    0 0 22px rgba(123, 97, 255, 0.7);
 }
 
 /* Smooth fade animation */
