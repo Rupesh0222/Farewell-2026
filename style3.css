@@ -33,7 +33,7 @@ body {
 .track {
   display: flex;
   gap: 25px;
-  animation: scroll 30s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 
 /* Images */
