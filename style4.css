@@ -19,7 +19,11 @@ body {
   font-size: 2.3rem;
   margin-bottom: 30px;
   opacity: 0;
-  animation: fadeDown 1.5s forwards;
+  animation: fadeDown 1.5s forwards, aliveGlow 3.2s ease-in-out infinite;
+  color: #00eaff;
+  text-shadow:
+    0 0 10px rgba(0, 234, 255, 0.7),
+    0 0 22px rgba(123, 97, 255, 0.6);
 }
 
 /* Poem */
@@ -49,17 +53,6 @@ body {
   font-size: 1rem;
 }
 
-/* YouTube link */
-.yt-link {
-  margin-top: 30px;
-  color: #ff9800;
-  text-decoration: none;
-  font-size: 1rem;
-  opacity: 0;
-  animation: fadeUp 1.5s forwards;
-  animation-delay: 16s;
-}
-
 /* Animations */
 @keyframes fadeDown {
   from {
@@ -76,5 +69,24 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* 🔥 NEON LIVING GLOW */
+@keyframes aliveGlow {
+  0% {
+    text-shadow:
+      0 0 8px rgba(0,234,255,0.5),
+      0 0 18px rgba(123,97,255,0.4);
+  }
+  50% {
+    text-shadow:
+      0 0 16px rgba(0,234,255,1),
+      0 0 35px rgba(123,97,255,0.9);
+  }
+  100% {
+    text-shadow:
+      0 0 8px rgba(0,234,255,0.5),
+      0 0 18px rgba(123,97,255,0.4);
   }
 }

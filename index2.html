@@ -5,6 +5,24 @@
   <title>Farewell Details</title>
   <link rel="stylesheet" href="style2.css">
 </head>
+
+<audio id="bgMusic" src="song.mp3" loop></audio>
+
+<script>
+  const music = document.getElementById("bgMusic");
+
+  window.addEventListener("load", () => {
+    music.volume = 0.4;
+
+    // mobile friendly play
+    music.play().catch(() => {
+      document.body.addEventListener("click", () => {
+        music.play();
+      }, { once: true });
+    });
+  });
+</script>
+
 <body>
 
   <!-- Welcome Text -->

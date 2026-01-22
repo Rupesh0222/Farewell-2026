@@ -1,13 +1,28 @@
 const music = document.getElementById("bgMusic");
 const images = document.querySelectorAll(".track img");
 
-// Background music
-window.onload = () => {
-  music.volume = 0.35;
-  music.play().catch(() => {});
-};
+// initial volume
+music.volume = 0.2;
 
-// Center-based fade logic
+// Laptop / desktop ke liye try autoplay
+window.addEventListener("load", () => {
+  music.play().catch(() => {
+    console.log("Autoplay blocked, waiting for tap");
+  });
+});
+
+// Mobile fix – first tap pe music play
+document.body.addEventListener(
+  "click",
+  () => {
+    if (music.paused) {
+      music.play();
+    }
+  },
+  { once: true }
+);
+
+// Center-based fade logic (same as before)
 setInterval(() => {
   const centerX = window.innerWidth / 2;
 
