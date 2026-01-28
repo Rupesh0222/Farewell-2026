@@ -38,7 +38,9 @@ body {
 .track {
   display: flex;
   gap: 25px;
-  animation: scroll 10s linear infinite;
+  animation: scroll 50s linear infinite;
+  width: max-content;          /* 🔥 IMPORTANT */
+  will-change: transform;   /* mobile GPU smoothness */
 }
 
 /* Images */
@@ -87,10 +89,10 @@ button {
 /* Animations */
 @keyframes scroll {
   from {
-    transform: translateX(100%);
+    transform: translateX(100vw);   /* ❌ % hatao */
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-100%);   /* SAME as before */
   }
 }
 
@@ -110,4 +112,4 @@ button {
     opacity: 1;
     transform: translateY(0);
   }
-}
+} 

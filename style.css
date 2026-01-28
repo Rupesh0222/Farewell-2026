@@ -42,6 +42,15 @@ body {
   box-shadow: 0 0 20px rgba(255, 152, 0, 0.6);
 }
 
+/* 🎊 Confetti Container (continuous falling fix) */
+#confetti-container {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
 /* 🎉 Confetti */
 .confetti {
   position: absolute;
@@ -79,3 +88,51 @@ button {
     0 0 15px rgba(0, 234, 255, 0.7),
     0 0 30px rgba(123, 97, 255, 0.6);
 }
+
+/* ⏳ Countdown */
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 25px auto 10px;
+  width: fit-content;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #00eaff;
+  border-radius: 14px;
+  padding: 12px 16px;
+  text-align: center;
+  box-shadow: 0 0 15px #00eaff;
+  min-width: 70px;
+}
+
+.time-box span {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+/* 🔹 LIGHT LABELS (Days / Hours / etc) */
+.time-box small {
+  font-size: 0.75rem;
+  color: #cfd8ff;        /* light bluish */
+  letter-spacing: 0.6px;
+  opacity: 0.9;
+}
+
+/* 🔹 Countdown description text */
+.countdown-label {
+  font-size: 0.85rem;
+  color: #9fb2ff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(159, 178, 255, 0.6);
+} 
+ 
